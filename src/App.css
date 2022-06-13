@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto");
 
+*{
+  box-sizing: border-box;
+}
 body{
+  background-color: #745E5E;
   margin: 0;
 }
 
@@ -9,39 +13,44 @@ body{
   display: flex;
 }
 
+
 .container{
   width: 50vw;
   height: 100vh;
 }
+
 .left-container{
+  padding:40px;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #745E5E;
 }
 
-.right-container {
- background-image: url('https://assets.codepen.io/6060109/form-stage-1.png');
- background-size:cover;
- background-position: center;
- background-repeat: no-repeat;
-}
-
-
 .text-input-content{
-  margin-left: 3rem;
+  width: 100%;
 }
+
+.right-container{
+  text-align: right;
+}
+.right-container > img {
+    height: 100%;  
+    object-position: bottom right;
+}
+
+
 .text-input-content h2{
   font-weight: 600;
   letter-spacing: 1.5px;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   width: 70%;
   color: #fff;
 }
 
 input[type=text]{
+  display: block;
   width: 90%;
-  margin-bottom: 1.5rem;
   padding: 0 0 10px 0;
   background-color: #745E5E;
 color: #fff;
@@ -53,12 +62,18 @@ input[type=text]::placeholder{
   color: rgba(255,255,255,0.85);
 }
 
-button{
+input:focus{
+  color: #fff;
+  outline: none;
+}
+.next-button{
+  padding: 5px 12px;
+  margin-top: 1.5rem;
   color: #745E5E;
   font-weight: 700;
   background-color: #fff;
   border: none;
-  padding: 5px 12px;
+  
 }
 
 button:hover{
@@ -72,4 +87,18 @@ button:hover{
   .left-container{
     width: 100%;
   }
+}
+
+.budget-button{
+  color: #fff;
+  font-weight: 700;
+  background-color: #745E5E;
+  width: 70px;
+  height: 25px;
+  border: 1px solid #fff;
+  margin-right: 10px
+}
+
+input:focus::placeholder {
+  color: transparent;
 }
