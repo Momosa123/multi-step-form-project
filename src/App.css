@@ -1,38 +1,75 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+body{
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App{
+  font-family: Roboto;
   display: flex;
-  flex-direction: column;
+}
+
+.container{
+  width: 50vw;
+  height: 100vh;
+}
+.left-container{
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: #745E5E;
 }
 
-.App-link {
-  color: #61dafb;
+.right-container {
+ background-image: url('https://assets.codepen.io/6060109/form-stage-1.png');
+ background-size:cover;
+ background-position: center;
+ background-repeat: no-repeat;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+.text-input-content{
+  margin-left: 3rem;
+}
+.text-input-content h2{
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  margin-bottom: 3rem;
+  width: 70%;
+  color: #fff;
+}
+
+input[type=text]{
+  width: 90%;
+  margin-bottom: 1.5rem;
+  padding: 0 0 10px 0;
+  background-color: #745E5E;
+color: #fff;
+border: none;
+border-bottom: 1px solid #fff;
+}
+
+input[type=text]::placeholder{
+  color: rgba(255,255,255,0.85);
+}
+
+button{
+  color: #745E5E;
+  font-weight: 700;
+  background-color: #fff;
+  border: none;
+  padding: 5px 12px;
+}
+
+button:hover{
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  .right-container{
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+  .left-container{
+    width: 100%;
   }
 }
